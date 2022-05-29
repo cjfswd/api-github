@@ -5,7 +5,10 @@ export async function useData(url: string) {
                 if (res.ok) return res.json().then(res=> res.map((item:any) => item.files));
                 else throw new Error("Status code error :" + res.status)
             })
-            .catch(err => console.log(err));
+            .catch(err => {
+                console.log(err)
+                return []
+            });
     }
 
     const onlyFiles = await completeData(url).then(res => res).catch(err => console.log(err))

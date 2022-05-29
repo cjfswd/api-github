@@ -29,4 +29,8 @@ code{
 :root {
   color-scheme: dark;
 }
+
+button{
+  @apply rounded bg-neutral-800 px-1 pb-1 text-sm
+}
 </style>
